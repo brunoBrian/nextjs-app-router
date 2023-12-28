@@ -1,7 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
 
 import { getFeaturedProducts } from "@/app/services/products";
+
+export const metadata: Metadata = {
+  title: "Home",
+};
 
 export default async function Home() {
   const [highlightedProduct, ...otherProducts] = await getFeaturedProducts();

@@ -1,9 +1,21 @@
-import { getProduct } from "@/app/services/products";
+import { Metadata } from "next";
 import Image from "next/image";
+
+import { getProduct } from "@/app/services/products";
 
 interface ProductProps {
   params: {
     slug: string;
+  };
+}
+
+export async function generateMetadata({
+  params,
+}: ProductProps): Promise<Metadata> {
+  const product = await getProduct(params.slug);
+
+  return {
+    title: product.title,
   };
 }
 
