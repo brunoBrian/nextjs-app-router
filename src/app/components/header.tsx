@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export function Header() {
   return (
-    <div className="flex items-center justify-between">
-      <div className="flex items-center gap-5">
+    <div className="flex flex-wrap items-center justify-between">
+      <div className="flex flex-wrap items-center gap-5">
         <Link href="/" className="text-2xl font-extrabold text-white">
           devstore
         </Link>
