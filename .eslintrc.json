@@ -4,6 +4,9 @@
     "@rocketseat/eslint-config/next"
   ],
   "rules": {
-    "prettier/prettier": "off"
+    "prettier/prettier": "off",
+    "rules": {
+      "@typescript-eslint/no-namespace": "off"
+    }
   }
 }
